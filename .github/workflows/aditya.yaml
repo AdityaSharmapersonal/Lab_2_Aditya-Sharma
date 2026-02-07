@@ -1,19 +1,23 @@
-name: Aditya GitHub Action
+name: Aditya GitHub Actions
 
 on: [push]
 
 jobs:
-  run-python:
+  lab-actions:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+    # Action 1: Run Python aditya.py
+    - name: Run Python Script
+      run: python aditya.py
 
-    - name: Run Python file
-      run: python main.py
+    # Action 2: Show author and date
+    - name: Show Author and Date
+      run: |
+        echo "Author: Aditya"
+        echo "Date:"
+        date
+

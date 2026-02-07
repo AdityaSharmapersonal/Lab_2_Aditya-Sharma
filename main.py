@@ -1,2 +1,2 @@
-print("Git status checked and file updated")
+print("hello aditya")
 
