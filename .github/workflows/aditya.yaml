@@ -2,7 +2,7 @@ name: Aditya Workflow
 
 on:
   push:
-    branches: [ * ]     # Changed: works on master/main/any branch
+
 
 jobs:
   test-job:
