@@ -15,6 +15,7 @@ jobs:
       run: |
         echo "Aditya Sharma - Running script!"
         echo 'print("Action 1 Success!")' > aditya.py
+        echo 'print("file is modified!")' > aditya.py
         python aditya.py
         
     - name: Action 2 - Show info
