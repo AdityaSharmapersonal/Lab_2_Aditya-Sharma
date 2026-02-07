@@ -2,7 +2,7 @@ name: Aditya Workflow
 
 on:
   push:
-    branches: [ main ]
+    branches: [ * ]     # Changed: works on master/main/any branch
 
 jobs:
   test-job:
@@ -14,8 +14,8 @@ jobs:
       
     - name: Action 1 - Run Script
       run: |
-        echo "Creating and running script..."
-        echo 'print("Aditya Sharma - Action 1 Complete!")' > aditya.py
+        echo "Aditya Sharma - Running script!"
+        echo 'print("Action 1 Success!")' > aditya.py
         python aditya.py
         
     - name: Action 2 - Show info
@@ -24,4 +24,5 @@ jobs:
         pwd
         ls -la
         uname -a
+
 
