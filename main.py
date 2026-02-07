@@ -1,1 +1,2 @@
-print("Hello, this is my first GitHub project")
+print("Git status checked and file updated")
+
