@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 name: Aditya GitHub Actions
+=======
+name: Eddy GitHub Action
+>>>>>>> 25ccf2affe90b56ce83ef90e4c24e4720041bd92
 
 on: [push]
 
 jobs:
+<<<<<<< HEAD
   lab-actions:
+=======
+  build:
+>>>>>>> 25ccf2affe90b56ce83ef90e4c24e4720041bd92
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v3
 
     # Action 1: Run Python aditya.py
@@ -21,3 +29,9 @@ jobs:
         echo "Date:"
         date
 
+<<<<<<< HEAD
+=======
+    - name: Run Python file
+      run: python main.py
+
+>>>>>>> 25ccf2affe90b56ce83ef90e4c24e4720041bd92
