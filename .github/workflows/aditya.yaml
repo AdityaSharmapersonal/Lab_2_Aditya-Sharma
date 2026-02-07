@@ -1,19 +1,27 @@
-name: Aditya GitHub Action
+name: Aditya Workflow
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
-  build:
+  test-job:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Action 1 - Run Script
+      run: |
+        echo "Creating and running script..."
+        echo 'print("Aditya Sharma - Action 1 Complete!")' > aditya.py
+        python aditya.py
+        
+    - name: Action 2 - Show info
+      run: |
+        echo "=== Aditya Sharma Info ==="
+        pwd
+        ls -la
+        uname -a
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
-    - name: Run Python file
-      run: python main.py
